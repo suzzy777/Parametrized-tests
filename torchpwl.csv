@@ -1,0 +1,10 @@
+Project_Name,Project_URL,Project_Hash,Test_id,Detected,Have_Patch,OD_Type,Polluter_or_Setter,Cleaner
+torchpwl,https://github.com/PiotrDabkowski/torchpwl,73b09cfa9f4c173988d8f075485b887c694fc5a8,torchpwl/pwl_test.py::test_pwl_default_init_response[7-3-MonoPointPWL],True,True,victim,True,True
+torchpwl,https://github.com/PiotrDabkowski/torchpwl,73b09cfa9f4c173988d8f075485b887c694fc5a8,torchpwl/pwl_test.py::test_pwl_is_continous[1-3-PointPWL],False,False,passed,False,False
+torchpwl,https://github.com/PiotrDabkowski/torchpwl,73b09cfa9f4c173988d8f075485b887c694fc5a8,torchpwl/pwl_test.py::test_pwl_is_continous[2-3-PointPWL],True,False,victim,False,False
+torchpwl,https://github.com/PiotrDabkowski/torchpwl,73b09cfa9f4c173988d8f075485b887c694fc5a8,torchpwl/pwl_test.py::test_pwl_is_continous[3-3-PointPWL],False,False,passed,False,False
+torchpwl,https://github.com/PiotrDabkowski/torchpwl,73b09cfa9f4c173988d8f075485b887c694fc5a8,torchpwl/pwl_test.py::test_pwl_is_continous[4-1-PointPWL],True,False,victim,False,False
+torchpwl,https://github.com/PiotrDabkowski/torchpwl,73b09cfa9f4c173988d8f075485b887c694fc5a8,torchpwl/pwl_test.py::test_pwl_is_continous[4-3-SlopedPWL],False,False,passed,False,False
+torchpwl,https://github.com/efe/zula,6328eb9c0e18debaaa769b7ac0d05a4a472f4746,torchpwl/pwl_test.py::test_pwl_default_init_response[7-1-MonoPointPWL],True,False,victim,False,False
+torchpwl,https://github.com/efe/zula,6328eb9c0e18debaaa769b7ac0d05a4a472f4746,torchpwl/pwl_test.py::test_pwl_is_continous[3-1-PointPWL],True,True,victim,True,True
+torchpwl,https://github.com/efe/zula,6328eb9c0e18debaaa769b7ac0d05a4a472f4746,torchpwl/pwl_test.py::test_pwl_is_continous[4-3-PointPWL],True,False,victim,False,False

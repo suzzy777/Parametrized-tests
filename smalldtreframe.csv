@@ -1,0 +1,11 @@
+Project_Name,Project_URL,Project_Hash,Test_id,Detected,Have_Patch,OD_Type,Polluter_or_Setter,Cleaner
+reframe,https://github.com/eth-cscs/reframe,576eb3f1dcc015d1e6d7a10602c748d4f810da68,unittests/test_policies.py::test_dependencies[AsynchronousExecutionPolicy],True,False,NOD,False,
+reframe,https://github.com/eth-cscs/reframe,576eb3f1dcc015d1e6d7a10602c748d4f810da68,unittests/test_policies.py::test_dependencies[SerialExecutionPolicy],True,False,brittle,True,
+reframe,https://github.com/eth-cscs/reframe,576eb3f1dcc015d1e6d7a10602c748d4f810da68,unittests/test_schedulers.py::test_cancel[local],True,False,brittle,True,
+reframe,https://github.com/eth-cscs/reframe,576eb3f1dcc015d1e6d7a10602c748d4f810da68,unittests/test_schedulers.py::test_cancel_before_submit[local],True,False,brittle,True,
+reframe,https://github.com/eth-cscs/reframe,576eb3f1dcc015d1e6d7a10602c748d4f810da68,unittests/test_schedulers.py::test_cancel_before_submit[pbs],True,False,brittle,True,
+reframe,https://github.com/eth-cscs/reframe,576eb3f1dcc015d1e6d7a10602c748d4f810da68,unittests/test_schedulers.py::test_poll_before_submit[local],True,False,brittle,True,
+reframe,https://github.com/eth-cscs/reframe,576eb3f1dcc015d1e6d7a10602c748d4f810da68,unittests/test_schedulers.py::test_poll_before_submit[pbs],True,False,brittle,True,
+reframe,https://github.com/eth-cscs/reframe,576eb3f1dcc015d1e6d7a10602c748d4f810da68,unittests/test_schedulers.py::test_poll_before_submit[slurm],True,False,brittle,True,
+reframe,https://github.com/eth-cscs/reframe,576eb3f1dcc015d1e6d7a10602c748d4f810da68,unittests/test_schedulers.py::test_poll_before_submit[squeue],True,False,brittle,True,
+reframe,https://github.com/eth-cscs/reframe,576eb3f1dcc015d1e6d7a10602c748d4f810da68,unittests/test_schedulers.py::test_poll_before_submit[torque],True,False,brittle,True,

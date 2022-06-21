@@ -40,8 +40,14 @@ do
     cd=$(grep $od_test resultt.csv | cut -d, -f11 | sort -u)
 
     #echo $cd
-                                                                                                      echo $f,$fin,$cd | sed 's/"//g'                   
-                                                                                   
+    ef=$(grep $od_test howmanyparams.csv | cut -d, -f1)
+    if [[ "$ef" == "$cd" ]]
+    then
+	continue;
+    else
+	
+	echo $f,$fin,$cd | sed 's/"//g'                   
+    fi                                                                               
 
 
     #echo "$od_test"                                                                     

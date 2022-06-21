@@ -40,7 +40,7 @@ do
     cd=$(grep $od_test resultt.csv | cut -d, -f11 | sort -u)
 
     #echo $cd
-                                                                                                      echo $f,$fin,$cd                   
+                                                                                                      echo $f,$fin,$cd | sed 's/"//g'                   
                                                                                    
 
 

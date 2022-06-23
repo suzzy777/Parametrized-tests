@@ -3,9 +3,7 @@
 #pip install pytest                                                                       
 #pip install pytest-csv                                                                   
                                                                                          
-CWD="$(pwd)"                                                                             
-ls                                                                                       
-awk -v OFS=',' '{                                                                        
+CWD="$(pwd)"                                                                                         awk -v OFS=',' '{                                                                        
     cmd = "echo \047" $0 "\047 | md5sum"                                                 
     val = ( (cmd | getline line) > 0 ? line : "FAILED")                                  
     close(cmd)                                                                           

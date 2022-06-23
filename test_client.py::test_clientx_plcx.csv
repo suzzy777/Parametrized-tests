@@ -1,0 +1,13 @@
+id,module,name,file,doc,markers,status,message,duration
+plcx/tests/comm/test_client.py::test_clientx[1],plcx.tests.comm.test_client,test_clientx[1],plcx/tests/comm/test_client.py,"Test tcp clientx coroutine.
+
+    :param tcp_server: tuple with host and port of testing server
+    :param msg: message to send",parametrize,passed,,0.11061763763427734
+plcx/tests/comm/test_client.py::test_clientx[123],plcx.tests.comm.test_client,test_clientx[123],plcx/tests/comm/test_client.py,"Test tcp clientx coroutine.
+
+    :param tcp_server: tuple with host and port of testing server
+    :param msg: message to send",parametrize,passed,,0.10420060157775879
+plcx/tests/comm/test_client.py::test_clientx[hola],plcx.tests.comm.test_client,test_clientx[hola],plcx/tests/comm/test_client.py,"Test tcp clientx coroutine.
+
+    :param tcp_server: tuple with host and port of testing server
+    :param msg: message to send",parametrize,passed,,0.10860228538513184

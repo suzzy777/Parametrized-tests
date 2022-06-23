@@ -1,5 +1,5 @@
 #!/bin/bash
-##set -x
+#set -x
 pip install pytest
 pip install pytest-csv
 
@@ -7,7 +7,7 @@ CWD="$(pwd)"
 
 #awk '{print "$4}' paramsmd5.csv 
 #cat resultt.csv | cut -d'[' -f2- | cut -d']' -f1 |  sort -u
-for f in $(cat cloudntpy.csv | cut -d'[' -f1 | sort -u)
+for f in $(cat hasparams.csv | cut -d'[' -f1 | sort -u)
 do
     project=$(echo $f | cut -d',' -f1)
 

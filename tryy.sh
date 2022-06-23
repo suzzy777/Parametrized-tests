@@ -35,9 +35,9 @@ do
     file_loc=$(echo $od_file_name | rev | cut -d'/' -f2- | rev)                          
     md5sum=$(echo $f | cut -d',' -f10)
 
-    ab=$(grep $od_test resultt.csv); var2=""; for gg in $ab; do cd=$(echo $gg | cut -d'[' -f2- | cut -d']' -f1); var2="  $var2 | $cd ";var3="[$var2]";done;fin=$(echo $var3 | sed 's/\[ | /\[ /g' | sed 's/-/;/g' );   
+    ab=$(grep $od_test paramsmd5.csv); var2=""; for gg in $ab; do cd=$(echo $gg | cut -d'[' -f2- | cut -d']' -f1); var2="  $var2 | $cd ";var3="[$var2]";done;fin=$(echo $var3 | sed 's/\[ | /\[ /g' | sed 's/-/;/g' );   
                                                                                                                                                                                                                                                     
-    cd=$(grep $od_test resultt.csv | cut -d, -f11 | sort -u)
+    cd=$(grep $od_test testnew.csv | cut -d, -f5 | sort -u)
 
     #echo $cd
     ef=$(grep $od_test howmanyparams.csv | cut -d, -f1)

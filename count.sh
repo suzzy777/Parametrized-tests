@@ -4,19 +4,10 @@ pip install pytest
 pip install pytest-csv
 
 CWD="$(pwd)"
-ls
-awk -v OFS=',' '{
-    cmd = "echo \047" $0 "\047 | md5sum"
-    val = ( (cmd | getline line) > 0 ? line : "FAILED")
-    close(cmd)
-    sub(/ .*/,"",val)
-    print $0, val
-}' hasparams.csv > paramsmd5.csv
 
-headr_m=$(awk -F, 'NR == 1 { print $10}' paramsmd5.csv)
-sed -i -e '1s/'$headr_m'/md5sum/'  paramsmd5.csv
-
-for f in $(cat paramsmd5.csv | sort -u)
+#awk '{print "$4}' paramsmd5.csv 
+#cat resultt.csv | cut -d'[' -f2- | cut -d']' -f1 |  sort -u
+for f in $(cat cloudntpy.csv | cut -d'[' -f1 | sort -u)
 do
     project=$(echo $f | cut -d',' -f1)
 
@@ -32,6 +23,13 @@ do
     file_loc=$(echo $od_file_name | rev | cut -d'/' -f2- | rev)
     md5sum=$(echo $f | cut -d',' -f10)
 
+    #ab=$(grep "tests/test_routing.py::TestRouting::test_jwt_route" resultt.csv);for gg in $ab;do cd=$(echo $gg | cut -d'[' -f2- | cut -d']' -f1);echo $cd;done;
+    #ab=$(grep "tests/test_routing.py::TestRouting::test_jwt_route" resultt.csv); var2="["; for gg in $ab; do cd=$(echo $gg | cut -d'[' -f2- | cut -d']' -f1); echo $cd;var2="  $var2 | $cd ";done;echo $var2;
+
+    #ab=$(grep "tests/test_routing.py::TestRouting::test_jwt_route" resultt.csv); var2=""; for gg in $ab; do cd=$(echo $gg | cut -d'[' -f2- | cut -d']' -f1); echo $cd;var2="  $var2 | $cd ";var3="[$var2]";done;echo $var3 | sed 's/\[ | /\[ /g'; 
+
+    #grep "tests/test_routing.py::TestRouting::test_jwt_route" resultt.csv | cut -d, -f11 |  sort -u
+    
     #echo "$od_test"
     #echo "$od_file_name"
     ##echo "$project"
@@ -60,11 +58,10 @@ do
     pip install -U -r requirements-test.txt
     pip install .
 
-    python3 -m pytest $od_test_name --csv $md5sum"_"$project.csv
-    
+    python3 -m pytest $od_test_name --csv $od_test_name"_"$project.csv
     #bpi=$(find $file_loc -name
 
-    count=$(cat $md5sum"_"$project.csv | wc -l)
+    count=$(cat $od_test_name"_"$project.csv | wc -l)
     count2=`expr $count - 1`
 
     echo $f,$count2
@@ -72,7 +69,8 @@ do
     #echo "$count2"
     unset count
     unset count2
-
+    
+#    $(echo $f | cut -d'[' -f1 | sort | uniq -c | sed 's/ //g' | sed 's/"//g' | sed 's/[a-zA-Z]/,&/')                                                                                                                                                    
     cd "$CWD"
     #bpr=$(grep -F "$od_test_name", $sha_$project.csv | cut -d, -f)
     #echo $f,$count2

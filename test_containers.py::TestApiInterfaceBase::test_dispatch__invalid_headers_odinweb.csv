@@ -1,0 +1,4 @@
+id,module,name,file,doc,markers,status,message,duration
+tests/test_containers.py::TestApiInterfaceBase::test_dispatch__invalid_headers[r0-422-Unprocessable Entity],tests.test_containers,test_dispatch__invalid_headers[r0-422-Unprocessable Entity],tests/test_containers.py,,parametrize,passed,,0.0004555028863251209
+tests/test_containers.py::TestApiInterfaceBase::test_dispatch__invalid_headers[r1-406-URI not available in preferred format],tests.test_containers,test_dispatch__invalid_headers[r1-406-URI not available in preferred format],tests/test_containers.py,,parametrize,passed,,0.0002736009191721678
+tests/test_containers.py::TestApiInterfaceBase::test_dispatch__invalid_headers[r2-405-Specified method is invalid for this resource],tests.test_containers,test_dispatch__invalid_headers[r2-405-Specified method is invalid for this resource],tests/test_containers.py,,parametrize,passed,,0.0002879020757973194

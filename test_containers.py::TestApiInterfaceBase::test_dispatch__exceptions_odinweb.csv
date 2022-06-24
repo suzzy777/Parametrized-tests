@@ -1,0 +1,7 @@
+id,module,name,file,doc,markers,status,message,duration
+tests/test_containers.py::TestApiInterfaceBase::test_dispatch__exceptions[error0-HTTPStatus.NOT_MODIFIED],tests.test_containers,test_dispatch__exceptions[error0-HTTPStatus.NOT_MODIFIED],tests/test_containers.py,,parametrize,passed,,0.0004448019899427891
+tests/test_containers.py::TestApiInterfaceBase::test_dispatch__exceptions[error1-400],tests.test_containers,test_dispatch__exceptions[error1-400],tests/test_containers.py,,parametrize,passed,,0.000430702930316329
+tests/test_containers.py::TestApiInterfaceBase::test_dispatch__exceptions[error2-400],tests.test_containers,test_dispatch__exceptions[error2-400],tests/test_containers.py,,parametrize,passed,,0.0005139028653502464
+tests/test_containers.py::TestApiInterfaceBase::test_dispatch__exceptions[NotImplementedError-501],tests.test_containers,test_dispatch__exceptions[NotImplementedError-501],tests/test_containers.py,,parametrize,passed,,0.0004955029580742121
+tests/test_containers.py::TestApiInterfaceBase::test_dispatch__exceptions[ValueError-500],tests.test_containers,test_dispatch__exceptions[ValueError-500],tests/test_containers.py,,parametrize,passed,,0.001220407197251916
+tests/test_containers.py::TestApiInterfaceBase::test_dispatch__exceptions[error5-500],tests.test_containers,test_dispatch__exceptions[error5-500],tests/test_containers.py,,parametrize,passed,,0.0011979069095104933

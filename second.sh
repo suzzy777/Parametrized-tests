@@ -29,16 +29,17 @@ do
     
     #git clone $url 
     
-    cd $project                                                                 
 
+    #cd $project                                                                 
 
-    count=$(cat $od_test_name"_"$project.csv | wc -l)       
-    count2=`expr $count - 1`                          
-                                                  
+    count2=$(python3 s.py $project/$od_test_name"_"$project.csv)
+    #count=$(cat $od_test_name"_"$project.csv | wc -l)       
+    #count2=`expr $count - 1`                          
+    if [[ $count2 == "" ]];then count2="EMPTY";fi;                                              
     echo $f,$count2                                   
                                                   
-#echo "$count2"                                   
-    unset count                                       
+    #echo "$count2"                                   
+    #unset count                                       
     unset count2                                      
                                                   
     cd "$CWD"

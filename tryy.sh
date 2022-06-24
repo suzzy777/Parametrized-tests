@@ -2,27 +2,14 @@
 #set -x                                                                                 
 #pip install pytest                                                                       
 #pip install pytest-csv                                                                   
-                                                                                         
-CWD="$(pwd)"                                                                                         awk -v OFS=',' '{                                                                        
-    cmd = "echo \047" $0 "\047 | md5sum"                                                 
-    val = ( (cmd | getline line) > 0 ? line : "FAILED")                                  
-    close(cmd)                                                                           
-    sub(/ .*/,"",val)                                                                    
-    print $0, val                                                                        
-}' hasparams.csv > paramsmd5.csv                                                         
-
-
-headr_m=$(awk -F, 'NR == 1 { print $10}' paramsmd5.csv)                                  
-sed -i -e '1s/'$headr_m'/md5sum/'  paramsmd5.csv                                         
 #awk '{print "$4}' paramsmd5.csv                                                         
 
 
-for f in $(cat paramsmd5.csv | cut -d'[' -f1 | sort -u )                                 
-do                                                                                       
+for f in $(cat hasparams.csv);do                                                                                                                       
     project=$(echo $f | cut -d',' -f1)                                                   
                                                                                          
     if [[ "Project_Name" == "$project" ]]; then continue; fi;                            
-                                                                                         
+    #if [[ "ext_pylib" == "$project" ]]; then continue; fi;                                                                                     
     url=$(echo $f | cut -d',' -f2)                                                       
     sha=$(echo $f | cut -d',' -f3)                                                       
     od_test=$(echo $f | cut -d',' -f4)                                                   
@@ -33,18 +20,19 @@ do
     file_loc=$(echo $od_file_name | rev | cut -d'/' -f2- | rev)                          
     md5sum=$(echo $f | cut -d',' -f10)
 
-    ab=$(grep -w $od_test paramsmd5.csv); var2=""; for gg in $ab; do cd=$(echo $gg | cut -d'[' -f2- | cut -d']' -f1); var2="  $var2 | $cd ";var3="[$var2]";done;fin=$(echo $var3 | sed 's/\[ | /\[ /g' | sed 's/-/;/g' );   
-                                                                                                                                                                                                                                                    
-    cd=$(grep -w $od_test testnew.csv | cut -d, -f5 | sort -u)
-
-    #echo $cd
-    ef=$(grep -w $od_test howmanyparams.csv | cut -d, -f1)
+    #ab=$(grep -w $od_test paramsmd5.csv); var2=""; for gg in $ab; do cd=$(echo $gg | cut -d'[' -f2- #| cut -d']' -f1); var2="  $var2 | $cd ";var3="[$var2]";done;fin=$(echo $var3 | sed 's/\[ | /\[ /g' #| sed 's/-/;/g' );   
+    if [[ $od_test_name == "" ]]; then continue;fi;
+    
+    cd=$(grep -w $od_test_name maxin.csv | cut -d, -f5)
+      #echo $cd
+    ef=$(grep -w $od_test_name howmanyparams.csv | cut -d, -f1)
+    
     if [[ "$ef" == "$cd" ]]
     then
 	continue
     else
 	
-	echo $f,$fin,$cd | sed 's/"//g'                   
+	echo $f,$cd |  sed 's/"//g'                   
     fi                                                                               
 
 

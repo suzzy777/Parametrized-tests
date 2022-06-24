@@ -1,0 +1,9 @@
+id,module,name,file,doc,markers,status,message,duration
+tests/test_memory_leak.py::test_long_run_for_memory_leak[items-2],tests.test_memory_leak,test_long_run_for_memory_leak[items-2],tests/test_memory_leak.py,"Simulate long running process with and without debug
+    and control memory usage",parametrize,passed,,0.0571018750051735
+tests/test_memory_leak.py::test_long_run_for_memory_leak[items-4],tests.test_memory_leak,test_long_run_for_memory_leak[items-4],tests/test_memory_leak.py,"Simulate long running process with and without debug
+    and control memory usage",parametrize,passed,,0.041626499994890764
+tests/test_memory_leak.py::test_long_run_for_memory_leak[lld-2],tests.test_memory_leak,test_long_run_for_memory_leak[lld-2],tests/test_memory_leak.py,"Simulate long running process with and without debug
+    and control memory usage",parametrize,passed,,0.05482345800555777
+tests/test_memory_leak.py::test_long_run_for_memory_leak[lld-4],tests.test_memory_leak,test_long_run_for_memory_leak[lld-4],tests/test_memory_leak.py,"Simulate long running process with and without debug
+    and control memory usage",parametrize,passed,,0.05070791600155644

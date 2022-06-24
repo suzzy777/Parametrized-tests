@@ -42,6 +42,9 @@ do
 
     git clone $url
 
+    virtualenv venv
+    source venv/bin/activate
+
     cd $project
     #cd $file_loc
     git reset --hard $sha

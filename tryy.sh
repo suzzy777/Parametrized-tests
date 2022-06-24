@@ -23,7 +23,7 @@ for f in $(cat hasparams.csv);do
     #ab=$(grep -w $od_test paramsmd5.csv); var2=""; for gg in $ab; do cd=$(echo $gg | cut -d'[' -f2- #| cut -d']' -f1); var2="  $var2 | $cd ";var3="[$var2]";done;fin=$(echo $var3 | sed 's/\[ | /\[ /g' #| sed 's/-/;/g' );   
     if [[ $od_test_name == "" ]]; then continue;fi;
     
-    cd=$(grep -w $od_test_name maxin.csv | cut -d, -f5)
+    cd=$(grep -w $od_test_name maxinn.csv | cut -d, -f5 | sort -u)
       #echo $cd
     ef=$(grep -w $od_test_name howmanyparams.csv | cut -d, -f1)
     
